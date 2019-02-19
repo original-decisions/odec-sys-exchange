@@ -1,0 +1,61 @@
+﻿{
+    "Exchange": {
+        "Service": {
+            "Type": "ProcessService",
+            "Name": "ProcessService",
+            "Description": "Test Service Runner"
+
+        },
+        "Settings": {
+            "Code": "ProcessService",
+            "Type": "ProcessService",
+            "RepeatLimit": 5,
+            "CountThreads": 5,
+            "Timeout": 10000,
+            "PackageSize": 7,
+            "WorkerTypeName": "AutoCloseAuctionWorker",
+            "DataSource": "AuctionDataSource",
+            "StopServiceAfterFirstRun": true 
+        },
+        "Registrant": {
+            "LookFor": [
+                {
+                    "Target": "Repository",
+                    "CompareOperation": 3
+                },
+                {
+                    "Target": "Export",
+                    "CompareOperation": 2
+                },
+                {
+                    "Target": "Import",
+                    "CompareOperation": 2
+                },
+                {
+                    "Target": "Exchange",
+                    "CompareOperation": 2
+                },
+                {
+                    "Target": "Worker",
+                    "CompareOperation": 3
+                },
+                {
+                    "Target": "DataSource",
+                    "CompareOperation": 3
+                },
+                {
+                    "Target": "Processing",
+                    "CompareOperation": 3
+                }
+            ],
+            "LookupFileNames": [
+                "lookupAssemblies.json"
+            ],
+            "CfgSectionName": "assemblies",
+            "CfgLookupTypes": [
+                0,
+                1
+            ]
+        }
+    }
+}

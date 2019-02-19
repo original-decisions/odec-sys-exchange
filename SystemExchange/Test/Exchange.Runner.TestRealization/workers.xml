@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+  <object id="AutoCloseAuctionWorker" name="AutoCloseAuctionWorker"
+      type="WinServices.AuctionProcessing.AutoCloseAuctionWorker, WinServices.AuctionProcessing" singleton="true">
+  </object>
+  <object id="AuctionDataSource" name="AuctionDataSource"
+      type="WinServices.AuctionProcessing.AuctionDataSource, WinServices.AuctionProcessing" singleton="true">
+  </object>
+</objects>

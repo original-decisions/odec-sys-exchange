@@ -1,0 +1,8 @@
+﻿{
+    "assemblies": [
+        "odec.Framework.SysExchange.dll",
+        "Exchange.Runner.TestRealization.dll",
+        "odec.CP.Auction.DAL.dll",
+        "odec.CP.Processing.DAL.dll"
+    ]
+}

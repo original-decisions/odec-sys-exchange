@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{EEC88430-F978-47EA-AAE1-D58C66D4C409}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "odec.Framework.ExchangeTester", "..\SystemExchange\Test\odec.Framework.ExchangeTester\odec.Framework.ExchangeTester.csproj", "{1CCBAE61-24E9-4276-8A87-7D56BBB4FB77}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "odec.Framework.Ex.Runner.Topshelf", "..\SystemExchange\Test\odec.Framework.Ex.Runner.Topshelf\odec.Framework.Ex.Runner.Topshelf.csproj", "{1C727307-0CF7-4F39-986E-52869B34CE82}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exchange.Runner.TestRealization", "..\SystemExchange\Test\Exchange.Runner.TestRealization\Exchange.Runner.TestRealization.csproj", "{9B3F4D10-6072-450C-80A1-E30AB79A6C58}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "odec.Framework.SysExchange.Interop", "..\SystemExchange\src\odec.Framework.SysExchange.Interop\odec.Framework.SysExchange.Interop.csproj", "{A8DA77F1-56E1-462A-BF5D-6B602F494E4E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "odec.Framework.SysExchange", "..\SystemExchange\src\odec.Framework.SysExchange\odec.Framework.SysExchange.csproj", "{FD622012-F8EB-48C2-A96A-36C71EA1AB33}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1CCBAE61-24E9-4276-8A87-7D56BBB4FB77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CCBAE61-24E9-4276-8A87-7D56BBB4FB77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CCBAE61-24E9-4276-8A87-7D56BBB4FB77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CCBAE61-24E9-4276-8A87-7D56BBB4FB77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C727307-0CF7-4F39-986E-52869B34CE82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C727307-0CF7-4F39-986E-52869B34CE82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C727307-0CF7-4F39-986E-52869B34CE82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C727307-0CF7-4F39-986E-52869B34CE82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B3F4D10-6072-450C-80A1-E30AB79A6C58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B3F4D10-6072-450C-80A1-E30AB79A6C58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B3F4D10-6072-450C-80A1-E30AB79A6C58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B3F4D10-6072-450C-80A1-E30AB79A6C58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8DA77F1-56E1-462A-BF5D-6B602F494E4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8DA77F1-56E1-462A-BF5D-6B602F494E4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8DA77F1-56E1-462A-BF5D-6B602F494E4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8DA77F1-56E1-462A-BF5D-6B602F494E4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD622012-F8EB-48C2-A96A-36C71EA1AB33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD622012-F8EB-48C2-A96A-36C71EA1AB33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD622012-F8EB-48C2-A96A-36C71EA1AB33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD622012-F8EB-48C2-A96A-36C71EA1AB33}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1CCBAE61-24E9-4276-8A87-7D56BBB4FB77} = {EEC88430-F978-47EA-AAE1-D58C66D4C409}
+		{1C727307-0CF7-4F39-986E-52869B34CE82} = {EEC88430-F978-47EA-AAE1-D58C66D4C409}
+		{9B3F4D10-6072-450C-80A1-E30AB79A6C58} = {EEC88430-F978-47EA-AAE1-D58C66D4C409}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5F6CBE8D-F31E-438E-B2FC-37F0A8678196}
+	EndGlobalSection
+EndGlobal

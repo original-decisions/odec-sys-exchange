@@ -1,0 +1,58 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netcoreapp1.0;net452;netcoreapp2.0;netcoreapp2.1;</TargetFrameworks>
+    <AssetTargetFallback>$(AssetTargetFallback);dotnet5.6;portable-net45+win8</AssetTargetFallback>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="CommonLoggingCfg.json" />
+    <None Remove="exchangeCfg.json" />
+    <None Remove="lookupAssemblies.json" />
+    <None Remove="NLog.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="CommonLoggingCfg.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="exchangeCfg.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lookupAssemblies.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="4.7.0" />
+    <packagereference Include="NUnit3TestAdapter" Version="3.10.0"></packagereference>
+    <packagereference Include="odec.Framework" Version="1.1.*"></packagereference>
+  </ItemGroup>
+
+  <ItemGroup Condition=" $(TargetFramework) != 'netcoreapp1.0' ">
+    <packagereference Include="Topshelf" Version="4.1.0"></packagereference>
+    <packagereference Include="Common.Logging.NLog41" Version="3.4.1"></packagereference>
+  </ItemGroup>
+
+  <ItemGroup Condition=" $(TargetFramework) == 'netcoreapp2.0' Or $(TargetFramework) == 'netcoreapp2.1'">
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\odec.Framework.SysExchange\odec.Framework.SysExchange.csproj" />
+    <ProjectReference Include="..\Exchange.Runner.TestRealization\Exchange.Runner.TestRealization.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ConcreteServiceTest\" />
+  </ItemGroup>
+
+</Project>

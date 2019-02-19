@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFrameworks>net452;netcoreapp2.1;netcoreapp2.0;netcoreapp1.0</TargetFrameworks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="workers.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="workers.xml" />
+  </ItemGroup>
+  <ItemGroup>
+
+    <PackageReference Include="odec.CP.Auction.DAL" Version="1.1.*" />
+    <PackageReference Include="odec.CP.Processing.DAL" Version="1.1.*" />
+    <PackageReference Include="odec.Framework" Version="1.1.*" />
+  </ItemGroup>
+  <ItemGroup Condition=" $(TargetFramework)=='netcoreapp2.0' Or  $(TargetFramework)=='netcoreapp2.1'">
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="2.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.1.2" />
+  </ItemGroup>
+  <ItemGroup Condition=" $(TargetFramework)=='net452' Or  $(TargetFramework)=='netcoreapp1.0'">
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="1.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="1.1.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\odec.Framework.SysExchange\odec.Framework.SysExchange.csproj" />
+  </ItemGroup>
+
+</Project>

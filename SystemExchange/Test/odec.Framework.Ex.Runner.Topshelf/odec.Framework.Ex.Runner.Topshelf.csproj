@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net452</TargetFramework>
+    <OutputType>exe</OutputType>
+    <ApplicationIcon />
+    <OutputTypeEx>exe</OutputTypeEx>
+    <StartupObject />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="CommonLoggingCfg.json" />
+    <None Remove="exchangeCfg.json" />
+    <None Remove="lookupAssemblies.json" />
+    <None Remove="NLog.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="CommonLoggingCfg.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="exchangeCfg.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lookupAssemblies.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Common.Logging.NLog41" Version="3.4.1" />
+    <PackageReference Include="Topshelf" Version="4.0.3" />
+    <PackageReference Include="odec.Framework" Version="1.1.*"></PackageReference>
+
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\odec.Framework.SysExchange.Interop\odec.Framework.SysExchange.Interop.csproj" />
+    <ProjectReference Include="..\..\src\odec.Framework.SysExchange\odec.Framework.SysExchange.csproj" />
+    <ProjectReference Include="..\Exchange.Runner.TestRealization\Exchange.Runner.TestRealization.csproj" />
+  </ItemGroup>
+
+</Project>
